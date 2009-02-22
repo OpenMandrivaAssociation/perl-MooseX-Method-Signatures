@@ -1,5 +1,5 @@
 %define module   MooseX-Method-Signatures
-%define version    0.06
+%define version    0.08
 %define release    %mkrel 1
 
 Name:       perl-%{module}
@@ -7,16 +7,15 @@ Version:    %{version}
 Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
-Summary:    No summary found
+Summary:    Method declarations with type constraints and no source filter
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/MooseX/%{module}-%{version}.tar.gz
-BuildRequires: perl-devel
+BuildRequires: perl(B::Hooks::EndOfScope)
 BuildRequires: perl(Devel::Declare)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Moose::Util::TypeConstraints)
 BuildRequires: perl(MooseX::Meta::Signature::Combined)
-BuildRequires: perl(Perl6::Signature)
-BuildRequires: perl(Scope::Guard)
+BuildRequires: perl(Parse::Method::Signatures)
 BuildRequires: perl(Test::Exception)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
