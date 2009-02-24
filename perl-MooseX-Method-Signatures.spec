@@ -17,6 +17,7 @@ BuildRequires: perl(Moose::Util::TypeConstraints)
 BuildRequires: perl(MooseX::Meta::Signature::Combined)
 BuildRequires: perl(Parse::Method::Signatures)
 BuildRequires: perl(Test::Exception)
+BuildRequires: perl-aliased
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
