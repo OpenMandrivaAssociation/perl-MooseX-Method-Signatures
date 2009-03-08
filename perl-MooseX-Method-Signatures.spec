@@ -1,6 +1,6 @@
 %define module   MooseX-Method-Signatures
 %define version    0.12
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -18,6 +18,7 @@ BuildRequires: perl(MooseX::Meta::Signature::Combined)
 BuildRequires: perl(Parse::Method::Signatures)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl-aliased
+Requires:   perl-aliased
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
