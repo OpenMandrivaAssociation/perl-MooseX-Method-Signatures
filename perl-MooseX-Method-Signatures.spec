@@ -20,6 +20,7 @@ BuildRequires: perl(MooseX::Meta::TypeConstraint::ForceCoercion)
 BuildRequires: perl(Parse::Method::Signatures)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl-aliased
+BuildRequires: perl-namespace-autoclean
 Requires:   perl-aliased
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
