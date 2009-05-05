@@ -11,10 +11,12 @@ Summary:    Method declarations with type constraints and no source filter
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/MooseX/%{module}-%{version}.tar.gz
 BuildRequires: perl(B::Hooks::EndOfScope)
+BuildRequires: perl(Context::Preserve)
 BuildRequires: perl(Devel::Declare)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Moose::Util::TypeConstraints)
 BuildRequires: perl(MooseX::Meta::Signature::Combined)
+BuildRequires: perl(MooseX::Meta::TypeConstraint::ForceCoercion)
 BuildRequires: perl(Parse::Method::Signatures)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl-aliased
