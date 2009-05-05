@@ -1,6 +1,6 @@
 %define module   MooseX-Method-Signatures
-%define version    0.12
-%define release    %mkrel 2
+%define version    0.16
+%define release    %mkrel 1
 
 Name:       perl-%{module}
 Version:    %{version}
