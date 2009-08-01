@@ -1,15 +1,16 @@
-%define module   MooseX-Method-Signatures
-%define version    0.16
-%define release    %mkrel 1
+%define upstream_name    MooseX-Method-Signatures
+%define upstream_version 0.16
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Method declarations with type constraints and no source filter
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/MooseX/%{module}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(B::Hooks::EndOfScope)
 BuildRequires: perl(Context::Preserve)
 BuildRequires: perl(Devel::Declare)
@@ -21,16 +22,16 @@ BuildRequires: perl(Parse::Method::Signatures)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl-aliased
 BuildRequires: perl-namespace-autoclean
-Requires:   perl-aliased
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+Requires:   perl-aliased
 
 %description
 Provides a proper method keyword, like "sub" but specificly for making
 methods and validating their arguments against Moose type constraints.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,4 +52,3 @@ rm -rf %buildroot
 %doc Changes
 %{_mandir}/man3/*
 %perl_vendorlib/MooseX
-
