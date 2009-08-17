@@ -13,14 +13,16 @@ Source0:    http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upst
 
 BuildRequires: perl(B::Hooks::EndOfScope)
 BuildRequires: perl(Context::Preserve)
-BuildRequires: perl(Devel::Declare)
+BuildRequires: perl(Devel::Declare)   >= 0.5.11
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Moose::Util::TypeConstraints)
 BuildRequires: perl(MooseX::LazyRequire)
 BuildRequires: perl(MooseX::Meta::Signature::Combined)
 BuildRequires: perl(MooseX::Meta::TypeConstraint::ForceCoercion)
 BuildRequires: perl(Parse::Method::Signatures)
+BuildRequires: perl(Task::Weaken)
 BuildRequires: perl(Test::Exception)
+BuildRequires: perl(Test::More)       >= 0.880.0
 BuildRequires: perl-aliased
 BuildRequires: perl-namespace-autoclean
 BuildArch: noarch
